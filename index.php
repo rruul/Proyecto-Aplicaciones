@@ -1,5 +1,5 @@
 <?php 
-    include './conexion.php';
+    include '../back/conexion.php';
 
 ?>
 
@@ -26,7 +26,7 @@
 
     <main>
         <div class="contenedor">
-            <div class="nada align-items-center text-center"><h1>Todos los cursos</h1></div>
+            <div class="nada align-items-center text-center mt-2"><h1>Todos los cursos</h1></div>
                 <div class="contenido" id="contenido">
                 
             </div>
