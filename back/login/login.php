@@ -20,10 +20,10 @@
                     header("location: ../pilin.html");
                 } 
             } elseif (mysqli_num_rows($resultado1) > 0) {
-                $mae=mysqli_fetch_array($resultado);
-                if($mae['correo']==$usuario and (password_verify($contrasena, $usu['contrasena']))) {
+                $mae=mysqli_fetch_array($resultado1);
+                if($mae['correo']==$usuario and (password_verify($contrasena, $mae['contrasena']))) {
                     $_SESSION["id"]=$mae['id'];
-                    header("location: ../pilin.html");
+                    header("location: ../pilin1.html");
                 } 
             } else {
                 echo '<div class="alert alert-danger">ACCESO DENEGADO</div>';
