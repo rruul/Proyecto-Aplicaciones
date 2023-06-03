@@ -22,7 +22,7 @@
         <title>Log in</title>
 </head>
 <body>
-        <?php include 'header.html' ?>
+        <?php include 'header.php' ?>
         <main>
         <div class="contenedor">
             <div class="container">

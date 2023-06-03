@@ -24,8 +24,7 @@
         <title>Cursos</title>
     </head>
 <body>
-    <?php include './header.html'?>
-
+    <?php include './header.php'?>
     <main>
         <div class="contenedor">
             <div class="nada align-items-center text-center mt-2"><h1>Todos los cursos</h1></div>
