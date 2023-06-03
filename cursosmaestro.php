@@ -1,9 +1,7 @@
-<?php 
+<?php
     session_start();
-    include './back/conexion.php';
-
+    include 'conexion.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -19,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link href="/css/style.css" rel="stylesheet"/>
-
+        <link rel="stylesheet" href="./css/about.css">
         <title>Cursos</title>
     </head>
 <body>
@@ -27,30 +25,9 @@
 
     <main>
         <div class="contenedor">
-            <div class="nada align-items-center text-center mt-2"><h1>Todos los cursos</h1></div>
-                <div class="contenido" id="contenido">
-                <?php if(!empty($_SESSION["id"])):?>
-                    <a class="btn btn-danger" href="./back/login/control_logout.php"> <!--./login.html-->
-                            Salir
-                    </a>
-                    <?php echo "Usuario " . $_SESSION["tipo"] . " con id: " . $_SESSION["id"]?>
-                <?php endif; ?>
-            </div>
+            cursos maestro alv
         </div>
         <?php include './footer.html'?>
-
-
-        <template id="tipocursos">
-        <div class="container">
-                    <div class="row g-2">
-                        <div class="col-6">
-                            <div class="p-3 border bg-light mb-3 text-center">
-                                <div class="tipo"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </template>
     </main>
     
     <script src="../js/index.js"></script>

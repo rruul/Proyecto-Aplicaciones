@@ -17,13 +17,15 @@
                 $usu=mysqli_fetch_array($resultado);
                 if($usu['correo']==$usuario and (password_verify($contrasena, $usu['contrasena']))) {
                     $_SESSION["id"]=$usu['id'];
-                    header("location: ../pilin.html");
+                    $_SESSION["tipo"] = "maestro";
+                    header("location: ./index.php");
                 } 
             } elseif (mysqli_num_rows($resultado1) > 0) {
                 $mae=mysqli_fetch_array($resultado1);
                 if($mae['correo']==$usuario and (password_verify($contrasena, $mae['contrasena']))) {
                     $_SESSION["id"]=$mae['id'];
-                    header("location: ../pilin1.html");
+                    $_SESSION["tipo"] = "maestro";
+                    header("location: ./index.php");
                 } 
             } else {
                 echo '<div class="alert alert-danger">ACCESO DENEGADO</div>';
