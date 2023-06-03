@@ -43,7 +43,7 @@
                         <h2>Acerca de nosotros</h2>
                         <div class="content1 mt-5">
                             <object data="./img/aboutus.svg" style="height: 35vh"></object>
-                            <p class="about_texts">En [nombre de la plataforma], nos enorgullece ofrecerte una amplia gama de cursos 
+                            <p class="about_texts">En LearnSphere, nos enorgullece ofrecerte una amplia gama de cursos 
                                 en línea diseñados para impulsar tu aprendizaje y ayudarte a alcanzar tus metas 
                                 personales y profesionales.</p>
                         </div>
@@ -56,6 +56,26 @@
                                 <object data="./img/aboutus2.svg" class="imgabout" style="height: 35vh"></object>
                         </div>
                     </div>
+                    <div id="band" class="container text-center mt-5">
+                            <h2>Creadores</h2>
+                            <div class="row mt-4">
+                                <div class="col-sm-4">
+                                    <p><strong>Raul Eduardo Ortega</strong></p>
+                                    <img src="./img/raul.jpg" class="rounded-circle person" alt="Random Name" width="235" height="235">
+                                    <a href="https://github.com/rruul" target="_blank" ><i class="bi bi-github" style="text-decoration: none; font-size: 2.5em; color: #27374D;"></i></a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p class="text-center"><strong>Jose Emmanuel Rangel</strong></p>
+                                    <img src="./img/mane.jpg" class="rounded-circle text-center person" alt="Random Name" width="235" height="235">
+                                    <a href="https://github.com/Mane645" target="_blank" ><i class="bi bi-github" style="text-decoration: none; font-size: 2.5em; color: #27374D;"></i></a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p class="text-center"><strong>Jennifer Gonzalez</strong></p>
+                                    <img src="./img/jennifer.jpg" class="rounded-circle person" alt="Random Name" width="235" height="235">
+                                    <a href="https://github.com/gonzalezjennifer" target="_blank" ><i class="bi bi-github" style="text-decoration: none; font-size: 2.5em; color: #27374D;"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     <a href="./registro.php" class="btn btnabout" style="background-color: #19A7CE;">¡Registrate!</a>
                 </div>
                 <div class="herowave" style="overflow: hidden;" >
