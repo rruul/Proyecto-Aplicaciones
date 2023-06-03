@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    include './back/conexion.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +51,11 @@
                     <a href="" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
                         <i class="bi bi-file-ruled"></i><span style="margin-left: 5px;"> Condiciones</span>
                     </a>
+                    <?php if(!empty($_SESSION["id"])):?>
+                        <a href="./back/login/control_logout.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #27374D; border-radius: 5px;">
+                            <i class="bi bi-people"></i><span style="margin-left: 5px;"> Salir</span>
+                        </a>
+                    <?php endif; ?>
                 </div>
                     
                 </div>
