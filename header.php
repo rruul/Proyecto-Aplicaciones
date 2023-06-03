@@ -48,7 +48,7 @@
                     <a href="./acercade.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
                         <i class="bi bi-question-circle"></i><span style="margin-left: 5px;"> Acerca de nosotros</span>
                     </a>
-                    <a href="" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
+                    <a href="./tandc.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
                         <i class="bi bi-file-ruled"></i><span style="margin-left: 5px;"> Condiciones</span>
                     </a>
                     <?php if(!empty($_SESSION["id"])):?>
