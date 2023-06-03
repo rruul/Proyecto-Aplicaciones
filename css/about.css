@@ -12,6 +12,7 @@
 }
 
 body {
+    align-items: center;
     font-family: 'Red Hat Display', sans-serif;
 }
 
@@ -35,7 +36,7 @@ figure {
 }
 
 p {
-    width: 90vh;
+    width: 99%;
 }
 
 .content1 {
@@ -57,4 +58,18 @@ p {
 
 .btnabout {
     margin-top: 50px;
+}
+
+.about_texts{
+    text-align: justify;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 99%;
+}
+
+th {
+    background-color: #AFD3E2;
 }

@@ -40,23 +40,82 @@
             <div class="principal">
                 <div class="container mt-4 mb-1" style="overflow:hidden; padding: 40px;">
                     <div class="text-center">
-                        <h2>Acerca de nosotros</h2>
+                        <h2>Terminos y Condiciones</h2>
                         <div class="content1 mt-5">
-                            <object data="./img/aboutus.svg" style="height: 35vh"></object>
-                            <p class="about_texts">En LearnSphere, nos enorgullece ofrecerte una amplia gama de cursos 
-                                en línea diseñados para impulsar tu aprendizaje y ayudarte a alcanzar tus metas 
-                                personales y profesionales.</p>
+                            <p class="about_texts">
+                                Bienvenido/a a LearnSphere, una plataforma escolar en línea que ofrece servicios educativos. Antes de utilizar nuestros servicios, 
+                                te pedimos que leas detenidamente los siguientes términos y condiciones, ya que establecen los derechos y responsabilidades tanto de 
+                                los usuarios como de LearnSphere. Al acceder o utilizar nuestros servicios, aceptas estar legalmente obligado/a por estos términos y 
+                                condiciones. Si no estás de acuerdo con alguno de los términos, te recomendamos que no utilices nuestra plataforma.
+                            </p>
+                        </div>
+                        <div class="mt-3 content1" >
+                            <table>
+                                <tr>
+                                    <th>1. Uso de la plataforma</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>a.</strong> LearnSphere es una plataforma diseñada para brindar servicios educativos a estudiantes, profesores y personal administrativo. <br>
+                                        <strong>b.</strong> Al registrarte en LearnSphere, debes proporcionar información precisa y actualizada. No debes crear múltiples cuentas ni compartir tu cuenta con terceros. <br>
+                                        <strong>c.</strong> Al utilizar nuestra plataforma, aceptas cumplir con todas las leyes y regulaciones aplicables.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>2. Privacidad y protección de datos:</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>a.</strong> Respetamos tu privacidad y nos comprometemos a proteger tus datos personales de acuerdo con nuestra política de privacidad. <br>
+                                        <strong>b.</strong> Recopilamos y utilizamos tus datos personales solo con fines educativos y administrativos. No compartiremos tus datos con terceros sin tu consentimiento, excepto cuando sea necesario para cumplir con la ley o proteger nuestros derechos legales.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>3. Propiedad intelectual:</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>a.</strong> Todo el contenido de la plataforma, incluyendo textos, imágenes, videos, software y materiales educativos, está protegido por derechos de autor y otras leyes de propiedad intelectual.
+                                        <strong>b.</strong> No está permitido copiar, modificar, distribuir o utilizar de cualquier forma el contenido de la plataforma sin nuestro consentimiento previo y por escrito.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>4. Conducta del usuario</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>a.</strong> Como usuario/a de la plataforma, te comprometes a utilizar nuestros servicios de manera responsable y respetuosa, sin difamar, acosar, amenazar o violar los derechos de otros usuarios. <br>
+                                        <strong>b.</strong> No está permitido cargar, publicar o compartir contenido que sea ilegal, ofensivo, difamatorio, obsceno o que infrinja los derechos de propiedad intelectual de terceros.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>5. Responsabilidad:</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>a.</strong> La plataforma escolar en línea se proporciona "tal cual" y no ofrecemos garantías de ningún tipo en cuanto a su funcionamiento, precisión, confiabilidad o disponibilidad. <br>
+                                        <strong>b.</strong> No nos hacemos responsables de cualquier daño directo, indirecto, incidental o consecuente que pueda surgir del uso o la imposibilidad de uso de la plataforma.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>6. Modificaciones y terminación:</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>a.</strong> Nos reservamos el derecho de realizar cambios en los términos y condiciones en cualquier momento. Te notificaremos sobre cualquier cambio y tu uso continuado de la plataforma después de dicha notificación constituirá tu aceptación de los nuevos términos. <br>
+                                        <strong>b.</strong> Nos reservamos el derecho de suspender o cancelar tu cuenta y acceso a la plataforma si violas estos términos y condiciones.
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                         <div class="content1 mt-5">
-                            <p class="about_texts">Nuestra misión es brindarte acceso a conocimientos de alta calidad y a expertos 
-                                en diversos campos, todo desde la comodidad de tu hogar u oficina. Creemos en la educación accesible 
-                                para todos, sin importar tu ubicación o circunstancias. Por eso, hemos desarrollado una plataforma 
-                                intuitiva y fácil de usar, que te permite aprender a tu propio ritmo y adaptar tu experiencia de 
-                                aprendizaje a tus necesidades individuales.</p>
-                                <object data="./img/aboutus2.svg" class="imgabout" style="height: 35vh"></object>
+                            <p class="about_texts">
+                            Estos términos y condiciones constituyen el acuerdo completo entre tú y LearnSphere con respecto al uso de nuestra plataforma escolar en línea. 
+                            Si tienes alguna pregunta o inquietud, contáctanos a través de los canales de soporte proporcionados en LearnSphere. Gracias por utilizar nuestros servicios.
+                            </p>
                         </div>
                     </div>
-                    <div id="band" class="container text-center mt-5">
+                    <div id="band" class="container text-center mt-4">
                             <h2>Creadores</h2>
                             <div class="row mt-4">
                                 <div class="col-sm-4">
