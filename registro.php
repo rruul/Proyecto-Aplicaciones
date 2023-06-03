@@ -17,8 +17,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link href="/css/style.css" rel="stylesheet"/>
-
-        <title>Cursos</title>
+        <link href="/css/registro.css" rel="stylesheet"/>
+        <link rel="icon" href="./img/open-book.png">
+        <title>Sign up</title>
     </head>
 <body>
     <?php include './header.html'?>
@@ -27,8 +28,11 @@
         <div class="contenedor">
         <div class="container">
                 <div class=" aleacion row align-items-center justify-content-center">
-                <div class = " col-md-6 p-4 mt-5" style="background-color: #372358;">
-                    <h2 class="text-center text-white mb-4">Sign Up<br> LEARNSPHERE</h2>
+                <div class = " col-md-6 p-4 mt-5" style="background-color: #19A7CE;">
+                    <div class="text-center">
+                        <img class = "d-inline-block align-text-center" src="./img/open-book.png" width="50" height="50"/>
+                    </div>
+                    <h2 class="text-center text-white mb-4">Sign Up</h2>
                     
                     <?php 
                         include './back/registro/registro.php';
@@ -40,24 +44,24 @@
                             <input type="text" class="form-control" name="nombre">
                         </div>
                         <div class="col-md-6 text-center text-light">
-                            <label for="apaterno" class="form-label">Apaterno</label>
+                            <label for="apaterno" class="form-label">Apellido paterno</label>
                             <input type="text" class="form-control" name="apaterno">
                         </div>
                         <div class="col-md-6 text-center text-light">
-                            <label for="amaterno" class="form-label">Amaterno</label>
+                            <label for="amaterno" class="form-label">Apellido materno</label>
                             <input type="text" class="form-control" name="amaterno">
                         </div>
                         <div class="col-md-6 text-center text-light">
-                            <label for="correo" class="form-label">Correo</label>
-                            <input type="email" class="form-control" name="correo">
+                            <label for="correo" class="form-label" >Correo</label>
+                            <input type="email" class="form-control" name="correo" placeholder="correo@ejemplo.com">
                         </div>
                         <div class="col-md-6 text-center text-light">
                             <label for="numero" class="form-label">Numero</label>
-                            <input type="text" class="form-control" name="numero">
+                            <input type="text" class="form-control" name="numero" placeholder="10 digitos">
                         </div>
                         <div class="col-md-6 text-center text-light">
                             <label for="contrasena" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" name="contrasena">
+                            <input type="password" class="form-control" name="contrasena" >
                         </div>
                         <div class="col-md-6 text-center text-light">
                             <label for="vercontrasena" class="form-label">Repite tu contraseña</label>
@@ -74,15 +78,15 @@
                         </div>
 
                         <div class="col-12 text-center text-light">
-                            <input class="btn w-100 mt-4 text-light bg-black" name="btnregistro" type="submit" value="Sign Up"/>
+                            <input class="btn w-100 mt-4 text-light bg-black mb-5 btningre" name="btnregistro" type="submit" value="Sign Up"/>
                         </div>
                         
                         
                     </form>
                     <p class="text-white text-center">
                         Already have an account?
-                        <a href="../registro/insertarusuario.php" style="text-decoration: none;">
-                            Sign In
+                        <a class="signinlink" href="../registro/insertarusuario.php" style="text-decoration: none; color: white">
+                            <b>Sign In</b>
                         </a>
                     </p>
                 </div>
