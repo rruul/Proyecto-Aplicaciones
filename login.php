@@ -18,7 +18,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link href="./css/style.css" rel="stylesheet"/>
         <link href="./css/login.css" rel="stylesheet"/>
-    <title>Login</title>
+        <link rel="icon" href="./img/open-book.png">
+        <title>Log in</title>
 </head>
 <body>
         <?php include 'header.html' ?>
