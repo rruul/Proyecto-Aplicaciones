@@ -1,7 +1,6 @@
 <?php 
     session_start();
     include './back/conexion.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -18,43 +17,109 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        <link href="/css/style.css" rel="stylesheet"/>
+        <link href="./css/style.css" rel="stylesheet"/>
+        <link href="./css/index.css" rel="stylesheet"/>
         <link rel="icon" href="./img/open-book.png">
 
         <title>Cursos</title>
     </head>
 <body>
-    <?php include './header.php'?>
-
     <main>
-        <div class="contenedor">
-            <div class="nada align-items-center text-center mt-2"><h1>Todos los cursos</h1></div>
-                <div class="contenido" id="contenido">
-                <?php if(!empty($_SESSION["id"])):?>
-                    <a class="btn btn-danger" href="./back/login/control_logout.php"> <!--./login.html-->
-                            Salir
-                    </a>
-                    <?php echo "Usuario " . $_SESSION["tipo"] . " con id: " . $_SESSION["id"]?>
-                <?php endif; ?>
-            </div>
-        </div>
-        <?php include './footer.html'?>
-
-
-        <template id="tipocursos">
-        <div class="container">
-                    <div class="row g-2">
-                        <div class="col-6">
-                            <div class="p-3 border bg-light mb-3 text-center">
-                                <div class="tipo"></div>
-                            </div>
-                        </div>
+    <?php include './header.php'?>
+            <!--Carousel section-->
+            <section id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class = "carousel-indicators">
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-current="true"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-current="true"
+                        aria-label="Slide 3"></button>
+                </div>
+                <!--Carousel content-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="carousel-image d-block w-100" src="./img/1.jpg">
+                        <span class="carousel-caption">
+                            <?php if(!empty($_SESSION["id"])):?>
+                               <?php echo ' <h5> Bienvenido(a) '. '<span class="text-info">' . $_SESSION["tipo"] . '</span></h5>'?>
+                                <p>
+                                    Continua con los cursos en los que ya llevas progreso!
+                                </p>
+                                <a class="btn btnlinks mt-3" href="./redirecccion/rmiscursos.php" style="background-color: #19A7CE;"><i class="bi bi-archive"></i><span style="margin-left: 5px;"> Mis cursos</span></a>
+                            <?php else: ?>
+                                <h5>
+                                    ¿Estas en busca de nuevos cursos?
+                                    <span class="text-info">¡LearnSphere es para ti!</span>
+                                </h5>
+                                <p>
+                                    Busca entre nuestros cursos y elige los que se adapten a tus necesidades!
+                                </p>
+                                <a class="btn btnlinks mt-3" href="./registro.php">Registrate</a>
+                            <?php endif; ?>
+                        </span>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel-image d-block w-100" src="./img/2.jpg">
+                        <span class="carousel-caption">
+                            <?php if(!empty($_SESSION["id"])):?>
+                               <?php echo ' <h5> Bienvenido(a) '. '<span class="text-info">' . $_SESSION["tipo"] . '</span></h5>'?>
+                                <p>
+                                    Busca cursos nuevos para comenzar!
+                                </p>
+                                <a class="btn btnlinks mt-3" href="./cursosmaestro.php" style="background-color: #19A7CE;"><i class="bi bi-archive"></i><span style="margin-left: 5px;"> Cursos</span></a>
+                            <?php else: ?>
+                                <h5>
+                                    ¿Quieres impartir algun curso pero no tienes una plataforma?
+                                    <span class="text-info">¡LearnSphere es para ti!</span>
+                                </h5>
+                                <p>
+                                    Imparte tus cursos en linea sin necesidad de establecer un horario de clase!
+                                </p>
+                                <a class="btn btnlinks mt-3" href="./registro.php">Registrate</a>
+                            <?php endif; ?>
+                        </span>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="carousel-image d-block w-100" src="./img/3.jpg">
+                        <span class="carousel-caption">
+                            <?php if(!empty($_SESSION["id"])):?>
+                               <?php echo ' <h5> Bienvenido(a) '. '<span class="text-info">' . $_SESSION["tipo"] . '</span></h5>'?>
+                                <p>
+                                    Imparte un nuevo curso!
+                                </p>
+                                <a class="btn btnlinks mt-3" href="" style="background-color: #19A7CE;"><i class="bi bi-easel"></i><span style="margin-left: 5px;"> Enseña</span></a>
+                            <?php else: ?>
+                                <h5>
+                                    ¿Te cuesta ir a la universidad?
+                                    <span class="text-info">¡LearnSphere es para ti!</span>
+                                </h5>
+                                <p>
+                                    Toma tus clases a traves de LearnSphere en el horario que se te adapte!
+                                </p>
+                                <a class="btn btnlinks mt-3" href="./registro.php">Registrate</a>
+                            <?php endif; ?>
+                        </span>
                     </div>
                 </div>
-        </template>
-    </main>
-    
-    <script src="../js/index.js"></script>
+                <!--Carousel prev and next buttons-->
+                <button class = "carousel-control-prev" type = "button"
+                    data-bs-target="#mainCarousel"
+                    data-bs-slide="prev"
+                >
+                    <span class = "carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class = "visually-hidden">Previous</span>
+                </button>
+                <button class = "carousel-control-next" type = "button"
+                    data-bs-target="#mainCarousel"
+                    data-bs-slide="next"
+                >
+                    <span class = "carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class = "visually-hidden">Next</span>
+                </button>
+            </section>
+            <?php include './footer.html'?>
+        </main>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
