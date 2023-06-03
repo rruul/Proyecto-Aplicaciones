@@ -16,7 +16,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        <link href="/css/style.css" rel="stylesheet"/>
+        <link href="./css/style.css" rel="stylesheet"/>
+        <link href="./css/login.css" rel="stylesheet"/>
     <title>Login</title>
 </head>
 <body>
@@ -25,8 +26,11 @@
         <div class="contenedor">
             <div class="container">
                 <div class="row mt-5 align-items-center justify-content-center">
-                <div class = " col-md-6 col-lg-5 p-4 mt-5" style="background-color: #372358;">
-                    <h2 class="text-center text-white mb-4">Login in<br> LEARNSPHERE</h2>
+                <div class = " col-md-6 col-lg-5 p-4 mt-5" style="background-color: #19A7CE;">
+                <div class="text-center">
+                    <img class = "d-inline-block align-text-center" src="./img/open-book.png" width="50" height="50"/>
+                </div>
+                    <h2 class="text-center text-white mb-4">Log in</h2>
                     
                     <?php 
                         include './back/login/login.php';
@@ -39,16 +43,16 @@
                         </div>
                         <div class="mb-4 text-center">
                             <label class="form-label text-light " for="contrasena">Contraseña</label>
-                            <input class="form-control" name="contrasena" type="password" placeholder="password" required />
+                            <input class="form-control" name="contrasena" type="password" placeholder="contraseña" required />
                         </div>
                         <div class="mb-4">
-                            <input class="btn w-100 mt-4 text-light bg-black" name="btningresar" type="submit" value="Log In"/>
+                            <input class="btn w-100 mt-4 text-light bg-black btningre" name="btningresar" type="submit" value="Log In"/>
                         </div>
                     </form>
                     <p class="text-white text-center">
                         Don't have an account?
-                        <a href="../registro/insertarusuario.php" style="text-decoration: none;">
-                            Sign Up
+                        <a href="registro.php" class="signuplink" style="text-decoration: none; color: white;">
+                            <b>Sign Up</b>
                         </a>
                     </p>
                 </div>
