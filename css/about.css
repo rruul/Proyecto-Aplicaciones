@@ -5,6 +5,10 @@
     flex-direction: row;
 }
 
+body {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
 figure {
     height: 100px;
 }
