@@ -6,6 +6,16 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <style>
+            .btnabout {
+                color: white!important;
+            }
+
+            .btn:hover {
+                background-color: #AFD3E2!important;
+                color: black!important;
+            }
+        </style>
         <!-- Required meta tags -->
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -46,17 +56,17 @@
                                 <object data="./img/aboutus2.svg" class="imgabout" style="height: 35vh"></object>
                         </div>
                     </div>
-                    <a href="./registro.php" class="btn btn-primary btnabout">Our Courses</a>
+                    <a href="./registro.php" class="btn btnabout" style="background-color: #19A7CE;">¡Registrate!</a>
                 </div>
                 <div class="herowave" style="overflow: hidden;" >
                     <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                        <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" style="stroke: none; fill: #08f;">
+                        <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" style="stroke: none; fill: #19A7CE;">
                         </path>
                     </svg>
                 </div>
             </div>
         </div>
-        <?php include './footer.php'?>
+        <?php include './footer.html'?>
     </main>
     
     <script src="../js/index.js"></script>
