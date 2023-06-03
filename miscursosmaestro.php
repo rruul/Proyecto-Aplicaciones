@@ -6,6 +6,15 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <style>
+            .btnregistrar:hover {
+                color: black!important;
+                background-color: #AFD3E2!important;
+            }
+            body {
+                font-family: 'Red Hat Display', sans-serif;
+            }
+        </style>
         <!-- Required meta tags -->
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,26 +26,27 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        <link href="/css/style.css" rel="stylesheet"/>
+        <link href="./css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/mcursosmaestro.css">
         <link rel="icon" href="./img/open-book.png">
         <title>Cursos</title>
     </head>
 <body>
-    <?php include './header.php'?>
-
     <main>
+        <?php include './header.php'?>
         <div class="contenedor">
             <div class="container">
-                <div class="nuevocurso">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registrarcurso">
-                        Registrar curso
-                    </button>
-                    <?php include './back/maestro/registrocurso.php'?>
+                <div class="cabeceratop" style="display: flex; ">
+                    <h2 class="mt-5">Tus cursos registrados</h2>
+                    <?php include './back/maestro/miscursos.php'; ?>
+                    <div class="nuevocurso">
+                        <button type="button" class="btn btnregistrar" data-bs-toggle="modal" data-bs-target="#registrarcurso" style="margin-top: 50px!important; margin-left: 48vw; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
+                            <i class="bi bi-plus-circle-fill" style="margin-right: 5px;"></i>Registrar curso
+                        </button>
+                        <?php include './back/maestro/registrocurso.php'?>
+                    </div>
                 </div>
-                <h2 class="mt-5">Tus cursos registrados</h2>
-                <?php include './back/maestro/miscursos.php'; ?>
-                <div class="cursos" id="cursos">
+                <div class="cursos mt-5" id="cursos">
                 
                 </div>
             </div>
@@ -67,15 +77,12 @@
             </div>
         </div>
         <?php include './footer.html'?>
-
-
-
         <template id="cardcursos">
             <div class="stylecardcursos">
                 <div class="titulo"></div>
                 <img src="./img/imgcurso.png" class="imgcardcursos">
                 <div class="horas" id="horas"> </div>
-                <button class="btnmas btn btn-primary" id="btnMas">Alumnos</button>
+                <button class="btnmas btn btncursos" id="btnMas">Alumnos</button>
             </div>
         </template>
     </main>
