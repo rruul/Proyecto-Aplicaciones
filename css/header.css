@@ -20,14 +20,20 @@ body {
     justify-content: center;
 }
 
-.btnsign:hover{
-    border-color: #EDF1D6;
-    background-color: #40513B;
+.btnsl {
+    transition-duration: 0.1s;
 }
 
-.btnlog:hover{
-    background-color: #EDF1D6;
-    border-color: #40513B;
+.btnsignup:hover{
+    border-color: #146C94;
+    background-color: #146C94!important;
+    color: white;
+}
+
+.btnlogin:hover{
+    border-color: #F6F1F1;
+    background-color: #F6F1F1!important;
+    color: black!important;
 }
 
 .nombreApp{
