@@ -31,7 +31,10 @@
                     $query = "SELECT * FROM usuario WHERE numero='$numero'";
                     $resultado = mysqli_query($conn, $query);
                     $usu=mysqli_fetch_array($resultado);
-                    if($usu['numero']==$numero) {
+                    $query1 = "SELECT * FROM maestro WHERE numero='$numero'";
+                    $resultado1 = mysqli_query($conn, $query1);
+                    $mae=mysqli_fetch_array($resultado1);
+                    if($usu['numero']==$numero || $mae['numero']==$numero) {
                         echo '<div class="alert alert-danger">NUMERO TELEFONICO YA REGISTRADO</div>';
                     } else {
                         $query = "INSERT INTO usuario (nombre, apaterno, amaterno, correo, contrasena, numero, alias) 
@@ -44,6 +47,36 @@
                         } 
                     } 
                 }
+            } elseif ($tipousuario == 'maestro' and mysqli_num_rows($result1) < 1) {
+                $mae = mysqli_fetch_array($result1);
+                if(strlen($contrasena) < 8) {
+                    echo '<div class="alert alert-danger">LA CONTRASEÑA DEBE CONTENER MINIMO 8 CARACTERES</div>';
+                } elseif (strlen($numero)<10 || strlen($numero)>10){
+                    echo '<div class="alert alert-danger">EL NUMERO TELEFONICO DEBE CONTENER 10 DIGITOS</div>';
+                } elseif ($contrasena != $confirm) {
+                    echo '<div class="alert alert-danger">LAS CONTRASEÑAS NO COINCIDEN</div>';
+                } else {
+                    $query = "SELECT * FROM maestro WHERE numero='$numero'";
+                    $resultado = mysqli_query($conn, $query);
+                    $mae=mysqli_fetch_array($resultado);
+                    $query1 = "SELECT * FROM usuario WHERE numero='$numero'";
+                    $resultado1 = mysqli_query($conn, $query1);
+                    $usu=mysqli_fetch_array($resultado1);
+                    if($mae['numero']==$numero || $usu['numero']==$numero) {
+                        echo '<div class="alert alert-danger">NUMERO TELEFONICO YA REGISTRADO</div>';
+                    } else {
+                        $query = "INSERT INTO usuario (nombre, apaterno, amaterno, correo, contrasena, numero, alias) 
+                        VALUES('$nombre', '$apaterno', '$amaterno', '$correo', '$contrasena_encriptada', '$numero', '')";
+                        $resultado = mysqli_query($conn, $query);
+                        if($resultado) {
+                            echo '<div class="alert alert-success">REGISTRO EXITOSO</div>';
+                        } else {
+                            echo '<div class="alert alert-danger">ERROR INESPERADO, INTENTE MAS TARDE</div>';
+                        } 
+                    } 
+                }
+            } else{
+                echo '<div class="alert alert-danger">ERROR inesperado</div>';
             }
         }
     } 
