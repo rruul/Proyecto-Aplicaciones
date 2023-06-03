@@ -46,3 +46,13 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.btnopc {
+    transition-duration: 0.1s;
+}
+
+.btnopc:hover{
+    border-color: #19A7CE;
+    background-color: #F6F1F1!important;
+    color: black!important;
+}
