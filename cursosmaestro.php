@@ -17,21 +17,34 @@
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link href="/css/style.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="./css/about.css">
         <link rel="icon" href="./img/open-book.png">
+        <link rel="stylesheet" href="./css/mcursosmaestro.css">
         <title>Cursos</title>
     </head>
 <body>
     <?php include './header.php'?>
-
     <main>
         <div class="contenedor">
-            cursos maestro alv
+            <div class="container">
+                <h2 class="mt-5 text-center">Cursos impartidos por otros maestros</h2>
+                <?php include './back/maestro/cursos.php'; ?>
+                <div class="cursos" id="cursos">
+                
+                </div>
+            </div>
         </div>
         <?php include './footer.html'?>
+        <template id="cardcursos">
+            <div class="stylecardcursos">
+                <div class="titulo"></div>
+                <img src="./img/imgcurso.png" class="imgcardcursos">
+                <div class="horas" id="horas"> </div>
+                <div class="maestro" id="maestro"></div>                
+            </div>
+        </template>
     </main>
     
-    <script src="../js/index.js"></script>
+    <script src="./js/cursosdisponiblesmaes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>

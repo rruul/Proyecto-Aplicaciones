@@ -17,8 +17,6 @@
                 $usu=mysqli_fetch_array($resultado);
                 if($usu['correo']==$usuario and (password_verify($contrasena, $usu['contrasena']))) {
                     $_SESSION["id"]=$usu['id'];
-                    // va alumno pero como no hay registro de maestros
-                    // asi lo requiere la trama y las pruebas
                     $_SESSION["tipo"] = "alumno";
                     header("location: ./index.php");
                 } 

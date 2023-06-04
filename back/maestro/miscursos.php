@@ -1,7 +1,7 @@
 <?php
     session_start();
     $maestro = $_SESSION["id"];
-    $querycursos = "SELECT nombre, descripcion, horas FROM curso WHERE id_maestro = '$maestro'";
+    $querycursos = "SELECT id, nombre, descripcion, horas FROM curso WHERE id_maestro = '$maestro'";
     $conncursos = mysqli_query($conn, $querycursos);
     // Crea un arreglo para almacenar los resultados
     $resultadosArray = array();
