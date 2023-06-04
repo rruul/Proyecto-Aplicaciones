@@ -71,27 +71,28 @@
                                 <h3 class="my-5">¡Contactanos!<i class="bi bi-chat-heart" style="margin-left: 13px;"></i></h3>
                                 <form class="row g-3" novalidate id="formulario">
                                     <div class="col-md-6">
+                                        <?php if(!empty($_SESSION["id"])):?>
+                                            <?php 
+                                                $idusu = $_SESSION["id"];
+                                                $usutipo = $_SESSION["tipo"];
+                                                if ($usutipo == "alumno"){
+                                                    $sql = "SELECT correo FROM usuario WHERE id='$idusu'";
+                                                } else {
+                                                    $sql = "SELECT correo FROM maestro WHERE id='$idusu'";  
+                                                }
+                                                $resul1 = mysqli_query($conn, $sql);
+                                                $mail=mysqli_fetch_array($resul1);
+                                                $correo = $mail["correo"];
+                                            ?>
+                                        <?php else: ?>
+                                            <?php $correo = ""; ?>
+                                        <?php endif; ?>
                                         <label for="validationCustom01"
                                         class="form-label"
                                         >
                                             <strong>Correo de contacto</strong>
                                         </label>
-                                        <?php if(!empty($_SESSION["id"])):?>
-                                                <?php 
-                                                    $idusu = $_SESSION["id"];
-                                                    $usutipo = $_SESSION["tipo"];
-                                                    if ($usutipo == "alumno"){
-                                                        $sql = "SELECT correo FROM usuario WHERE id='$idusu'";
-                                                        $correo = mysqli_query($conn, $sql);
-                                                    } else {
-                                                        $sql = "SELECT correo FROM maestro WHERE id='$idusu'";
-                                                        $correo = mysqli_query($conn, $sql);
-                                                    }
-                                                    echo '<input type="text" name="usuario" class="form-control" id="validationCustom01" value="'. $correo .'" disabled>'
-                                                ?>
-                                            <?php else: ?>
-                                                <?php echo '<input type="text" name="usuario" class="form-control" id="validationCustom01" placeholder="Escribe tu correo" required>' ?>
-                                            <?php endif; ?>
+                                            <input type="text" name="usuario" class="form-control" id="validationCustom01" placeholder="Escribe tu correo" value="<?php echo $correo?>" <?php if(!empty($correo)){echo 'disabled';}?> required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="validationCustom02"
