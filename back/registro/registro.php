@@ -65,7 +65,7 @@
                     if($mae['numero']==$numero || $usu['numero']==$numero) {
                         echo '<div class="alert alert-danger">NUMERO TELEFONICO YA REGISTRADO</div>';
                     } else {
-                        $query = "INSERT INTO usuario (nombre, apaterno, amaterno, correo, contrasena, numero, alias) 
+                        $query = "INSERT INTO maestro (nombre, apaterno, amaterno, correo, contrasena, numero, alias) 
                         VALUES('$nombre', '$apaterno', '$amaterno', '$correo', '$contrasena_encriptada', '$numero', '')";
                         $resultado = mysqli_query($conn, $query);
                         if($resultado) {
