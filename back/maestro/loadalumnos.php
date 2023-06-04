@@ -6,7 +6,7 @@
         $querycursos = "SELECT u.id, u.nombre, u.apaterno, u.amaterno, u.correo
                         FROM usuario u
                         JOIN inscripcion i ON u.id = i.id_alumno
-                        WHERE i.id_curso = 5";
+                        WHERE i.id_curso = '$curso'";
 
         $conncursos = mysqli_query($conn, $querycursos);
         // Crea un arreglo para almacenar los resultados
@@ -22,7 +22,7 @@
 
         // Pasa el resultado a una variable JavaScript
         echo "<script>";
-        echo "let alumnos = " . $resultadosJson . ";";
+        echo "var alumnos = " . $resultadosJson . ";";
         echo "</script>";
    
 ?>

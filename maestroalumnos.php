@@ -1,6 +1,7 @@
 <?php
     session_start();
     include './back/conexion.php';
+    include './back/maestro/loadalumnos.php'
 ?>
 
 <!DOCTYPE html>
@@ -37,37 +38,34 @@
         <div class="contenedor">
             <div class="container">
                 <div class="cabeceratop" style="display: flex; ">
-                    <h2 class="mt-5">Tus cursos registrados</h2>
-                    <?php include './back/maestro/miscursos.php'; ?>
+                    <h2 class="mt-5">Tus alumnos registrados a este curso</h2>
                     <div class="nuevocurso">
-                        <button type="button" class="btn btnregistrar" data-bs-toggle="modal" data-bs-target="#registrarcurso" style="margin-top: 50px!important; margin-left: 48vw; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
-                            <i class="bi bi-plus-circle-fill" style="margin-right: 5px;"></i>Registrar curso
-                        </button>
-                        <?php include './back/maestro/registrocurso.php'?>
+                        <a class="btn btnregistrar" style="margin-top: 50px!important; margin-left: 28vw; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
+                            <i class="bi bi-plus-circle-fill" style="margin-right: 5px;"></i>Eliminar curso
+                        </a>
+                        <a href="./miscursosmaestro.php" class="btn" style="margin-top: 50px!important; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
+                            <i class="bi bi-plus-circle-fill" style="margin-right: 5px;"></i>Regresar
+                        </a>
                     </div>
                 </div>
-                <div class="cursos mt-5" id="cursos">
+                <div class="cursos mt-5" id="alumnos">
                 
                 </div>
             </div>
         </div>
 
         <?php include './footer.html'?>
-        <template id="cardcursos">
+        <template id="cardalumno">
             <div class="stylecardcursos">
-                <div class="titulo"></div>
-                <img src="./img/imgcurso.png" class="imgcardcursos">
-                <div class="horas" id="horas"> </div>
-                <form action="./maestroalumnos.php" method="post">
-                    <input type="number" name="id" id="id" class="id d-none" value="">
-                    <input type="submit" value="Alumnos" class="btn btn-primary btnenviar" id="btnenviar">
-                </form>
+                <div class="nombre"></div>
+                <div class="correo" id="correo"> </div>
+                <a href="" class="btn btn-danger">Eliminar</a>
             </div>
         </template>
 
     </main>
     
-    <script src="./js/miscursosmaestro.js"></script>
+    <script src="./js/misalumnosmaestro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
