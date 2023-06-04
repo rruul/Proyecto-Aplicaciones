@@ -18,6 +18,7 @@ body {
 
 .stylecardcursos{
     display: flex;
+    height: 58vh;
     width: 35vh;
     height: 50vh;
     max-width: 85%;

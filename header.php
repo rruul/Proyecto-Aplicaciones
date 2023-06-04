@@ -20,6 +20,7 @@
             <div class="position-sticky">
                 
                 <div class="list-group list-group-flush mx-3 mt-4 d-grip gap-3">
+                <?php if(empty($_SESSION["id"])):?>
                     <div class="botones btn-group" role="group" id="botones" >
                         <div class=" d-grid gap-2 d-md-flex"> <!--Alt: " d-grid gap-2 d-md-flex justify-content-md-end"--> <!--gap-2: separation-->
                             <a class="btn btnsl btnsignup" style="background-color: #F6F1F1;" href="./registro.php"> <!--./login.html-->
@@ -30,6 +31,7 @@
                             </a>
                         </div>
                     </div>
+                <?php endif; ?>
                     <a id="home" href="/" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;" aria-current="true">
                         <i class="bi bi-house"></i><span style="margin-left: 5px;"> Pagina principal</span>
                     </a>
