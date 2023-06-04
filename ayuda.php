@@ -1,6 +1,6 @@
-<?php 
-    include './back/conexion.php';
+<?php
     session_start();
+    include './back/conexion.php';
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +76,22 @@
                                         >
                                             <strong>Correo de contacto</strong>
                                         </label>
-                                            <input type="text" name="usuario" class="form-control" id="validationCustom01" placeholder="Escribe tu correo" required>
+                                            <?php if(!empty($_SESSION["id"])):?>
+                                                <?php 
+                                                    $idusu = $_SESSION["id"];
+                                                    $usutipo = $_SESSION["tipo"];
+                                                    if ($usutipo == "alumno"){
+                                                        $sql = "SELECT correo FROM usuario WHERE id='$idusu'";
+                                                        $correo = mysqli_query($conn, $sql);
+                                                    } else {
+                                                        $sql = "SELECT correo FROM maestro WHERE id='$idusu'";
+                                                        $correo = mysqli_query($conn, $sql);
+                                                    }
+                                                    echo '<input type="text" name="usuario" class="form-control" id="validationCustom01" value="'. $correo .'" disabled>'
+                                                ?>
+                                            <?php else: ?>
+                                                <?php echo '<input type="text" name="usuario" class="form-control" id="validationCustom01" placeholder="Escribe tu correo" required>' ?>
+                                            <?php endif; ?>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="validationCustom02"
