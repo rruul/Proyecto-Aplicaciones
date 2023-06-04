@@ -19,7 +19,7 @@
                     $_SESSION["id"]=$usu['id'];
                     // va alumno pero como no hay registro de maestros
                     // asi lo requiere la trama y las pruebas
-                    $_SESSION["tipo"] = "maestro";
+                    $_SESSION["tipo"] = "alumno";
                     header("location: ./index.php");
                 } 
             } elseif (mysqli_num_rows($resultado1) > 0) {
