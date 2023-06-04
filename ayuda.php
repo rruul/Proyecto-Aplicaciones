@@ -81,13 +81,15 @@
                                                     $idusu = $_SESSION["id"];
                                                     $usutipo = $_SESSION["tipo"];
                                                     if ($usutipo == "alumno"){
-                                                        $sql = "SELECT correo FROM usuario WHERE id='$idusu'";
-                                                        $correo = mysqli_query($conn, $sql);
+                                                        $sql = "SELECT * FROM usuario WHERE id='$idusu'";
+                                                        $res = mysqli_query($conn, $sql);
+                                                        $correo = mysqli_fetch_array($res);
                                                     } else {
-                                                        $sql = "SELECT correo FROM maestro WHERE id='$idusu'";
-                                                        $correo = mysqli_query($conn, $sql);
+                                                        $sql = "SELECT * FROM maestro WHERE id='$idusu'";
+                                                        $res = mysqli_query($conn, $sql);
+                                                        $correo = mysqli_fetch_array($res);
                                                     }
-                                                    echo '<input type="text" name="usuario" class="form-control" id="validationCustom01" value="'. $correo .'" disabled>'
+                                                    echo '<input type="text" name="usuario" class="form-control" id="validationCustom01" value="'. $correo['correo'] .'" disabled>';
                                                 ?>
                                             <?php else: ?>
                                                 <?php echo '<input type="text" name="usuario" class="form-control" id="validationCustom01" placeholder="Escribe tu correo" required>' ?>
