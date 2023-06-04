@@ -44,7 +44,7 @@
                     <a href="./redirecccion/rcursos.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
                         <i class="bi bi-archive"></i><span style="margin-left: 5px;"> Cursos</span>
                     </a>
-                    <a href="" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
+                    <a href="./ayuda.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
                         <i class="bi bi-people"></i><span style="margin-left: 5px;"> Ayuda y asistencia</span>
                     </a>
                     <a href="./acercade.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">

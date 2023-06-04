@@ -67,7 +67,7 @@
                                 <p>
                                     Busca cursos nuevos para comenzar!
                                 </p>
-                                <a class="btn btnlinks mt-3" href="./cursosmaestro.php" style="background-color: #19A7CE;"><i class="bi bi-archive"></i><span style="margin-left: 5px;"> Cursos</span></a>
+                                <a class="btn btnlinks mt-3" href="./redirecccion/rcursos.php" style="background-color: #19A7CE;"><i class="bi bi-archive"></i><span style="margin-left: 5px;"> Cursos</span></a>
                             <?php else: ?>
                                 <h5>
                                     ¿Quieres impartir algun curso pero no tienes una plataforma?
