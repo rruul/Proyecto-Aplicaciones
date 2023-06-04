@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link href="/css/style.css" rel="stylesheet"/>
         <link rel="stylesheet" href="./css/about.css">
+        <link rel="icon" href="./img/open-book.png">
         <title>Cursos</title>
     </head>
 <body>

@@ -6,6 +6,16 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <style>
+            .btnabout {
+                color: white!important;
+            }
+
+            .btn:hover {
+                background-color: #AFD3E2!important;
+                color: black!important;
+            }
+        </style>
         <!-- Required meta tags -->
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,6 +29,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link href="/css/style.css" rel="stylesheet"/>
         <link rel="stylesheet" href="./css/about.css">
+        <link rel="icon" href="./img/open-book.png">
         <title>Cursos</title>
     </head>
 <body>
@@ -32,7 +43,7 @@
                         <h2>Acerca de nosotros</h2>
                         <div class="content1 mt-5">
                             <object data="./img/aboutus.svg" style="height: 35vh"></object>
-                            <p class="about_texts">En [nombre de la plataforma], nos enorgullece ofrecerte una amplia gama de cursos 
+                            <p class="about_texts">En LearnSphere, nos enorgullece ofrecerte una amplia gama de cursos 
                                 en línea diseñados para impulsar tu aprendizaje y ayudarte a alcanzar tus metas 
                                 personales y profesionales.</p>
                         </div>
@@ -45,17 +56,37 @@
                                 <object data="./img/aboutus2.svg" class="imgabout" style="height: 35vh"></object>
                         </div>
                     </div>
-                    <a href="./registro.php" class="btn btn-primary btnabout">Our Courses</a>
+                    <div id="band" class="container text-center mt-5">
+                            <h2>Creadores</h2>
+                            <div class="row mt-4">
+                                <div class="col-sm-4">
+                                    <p><strong>Raul Eduardo Ortega</strong></p>
+                                    <img src="./img/raul.jpg" class="rounded-circle person" alt="Random Name" width="235" height="235">
+                                    <a href="https://github.com/rruul" target="_blank" ><i class="bi bi-github" style="text-decoration: none; font-size: 2.5em; color: #27374D;"></i></a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p class="text-center"><strong>Jose Emmanuel Rangel</strong></p>
+                                    <img src="./img/mane.jpg" class="rounded-circle text-center person" alt="Random Name" width="235" height="235">
+                                    <a href="https://github.com/Mane645" target="_blank" ><i class="bi bi-github" style="text-decoration: none; font-size: 2.5em; color: #27374D;"></i></a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p class="text-center"><strong>Jennifer Gonzalez</strong></p>
+                                    <img src="./img/jennifer.jpg" class="rounded-circle person" alt="Random Name" width="235" height="235">
+                                    <a href="https://github.com/gonzalezjennifer" target="_blank" ><i class="bi bi-github" style="text-decoration: none; font-size: 2.5em; color: #27374D;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    <a href="./registro.php" class="btn btnabout" style="background-color: #19A7CE;">¡Registrate!</a>
                 </div>
                 <div class="herowave" style="overflow: hidden;" >
                     <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                        <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" style="stroke: none; fill: #08f;">
+                        <path d="M-0.00,50.10 C150.00,150.33 349.20,-50.10 500.00,50.10 L500.00,150.33 L-0.00,150.33 Z" style="stroke: none; fill: #19A7CE;">
                         </path>
                     </svg>
                 </div>
             </div>
         </div>
-        <?php include './footer.php'?>
+        <?php include './footer.html'?>
     </main>
     
     <script src="../js/index.js"></script>
