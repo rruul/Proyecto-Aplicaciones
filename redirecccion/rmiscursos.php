@@ -4,6 +4,7 @@
         header("location: ../miscursosalumno.php");
     } elseif($_SESSION["tipo"] == "maestro") {
         header("location: ../miscursosmaestro.php");
-    }
-    echo "inicia sesion xd";
+    } else {
+        header("location: ../regorlog.php");
+    } 
 ?>

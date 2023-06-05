@@ -1,6 +1,12 @@
 <?php
     session_start();
     include './back/conexion.php';
+    if(empty($_SESSION["id"])){
+        header('location: ./index.php');
+    }
+    if($_SESSION["tipo"] == "alumno"){
+        header('location: ./miscursosalumno.php');
+    }
 ?>
 
 <!DOCTYPE html>
