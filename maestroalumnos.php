@@ -1,7 +1,13 @@
 <?php
     session_start();
     include './back/conexion.php';
-    include './back/maestro/loadalumnos.php'
+    include './back/maestro/loadalumnos.php';
+    if(empty($_SESSION["id"])){
+        header('location: ./index.php');
+    }
+    if($_SESSION["tipo"] == "alumno"){
+        header('location: ./miscursosalumno.php');
+    }
 ?>
 
 <!DOCTYPE html>
