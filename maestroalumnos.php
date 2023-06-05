@@ -28,7 +28,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link href="./css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/mcursosmaestro.css">
+        
         <link rel="icon" href="./img/open-book.png">
         <title>Cursos</title>
     </head>
@@ -37,15 +37,12 @@
         <?php include './header.php'?>
         <div class="contenedor">
             <div class="container">
-                <div class="cabeceratop" style="display: flex; ">
-                    <h2 class="mt-5">Tus alumnos registrados a este curso</h2>
-                    <div class="nuevocurso">
-                        <a class="btn btnregistrar" style="margin-top: 50px!important; margin-left: 28vw; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
-                            <i class="bi bi-plus-circle-fill" style="margin-right: 5px;"></i>Eliminar curso
-                        </a>
-                        <a href="./miscursosmaestro.php" class="btn" style="margin-top: 50px!important; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
-                            <i class="bi bi-plus-circle-fill" style="margin-right: 5px;"></i>Regresar
-                        </a>
+                <div style="display: flex; align-items: center;; width: 100%">
+                    <h2 class="mt-5" id="htexto">Tus alumnos registrados a este curso</h2>
+                    <div class="container" id="btncontenedor" style="display: flex; flex-direction: row;">
+                        <!-- Si se cambian estas clases de botones dentro de templates de debe cambiar el javascript o no jala-->
+                        <a class="btn btn-danger eliminarcurso"> Eliminar curso </a>
+                        <a href="./miscursosmaestro.php" class="btn btn-primary"> Regresar</a>
                     </div>
                 </div>
                 <div class="cursos mt-5" id="alumnos">
@@ -59,13 +56,15 @@
             <div class="stylecardcursos">
                 <div class="nombre"></div>
                 <div class="correo" id="correo"> </div>
-                <a href="" class="btn btn-danger">Eliminar</a>
+                <!-- Si se cambian estas clases de botones dentro de templates de debe cambiar el javascript o no jala-->
+                <button class="btn btn-danger btneliminar">Eliminar</button>
             </div>
         </template>
 
     </main>
     
     <script src="./js/misalumnosmaestro.js"></script>
+    <script src="/js/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

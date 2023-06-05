@@ -23,6 +23,7 @@
         // Pasa el resultado a una variable JavaScript
         echo "<script>";
         echo "var alumnos = " . $resultadosJson . ";";
+        echo "var id_curso = " . $curso . ";";
         echo "</script>";
    
 ?>
