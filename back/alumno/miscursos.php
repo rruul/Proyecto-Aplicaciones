@@ -3,7 +3,7 @@
     include '../conexion.php';
     $alumno = $_SESSION["id"];
 
-    $sqlcursos = "SELECT c.id AS curso_id, c.horas ,c.nombre AS nombre_curso, m.id, m.nombre 
+    $sqlcursos = "SELECT c.id AS curso_id, c.horas ,c.nombre AS nombre_curso, c.descripcion ,m.id, m.nombre 
         FROM curso c
         INNER JOIN maestro m ON c.id_maestro = m.id
         WHERE EXISTS (
@@ -28,8 +28,10 @@ if ($result->num_rows > 0) {
     echo "<script>";
     echo "var cursosdisp = " . $cursosdisponibles . ";";
     echo "</script>";
-} else {
-    echo '<div class="alert alert-danger text-center">Aun no tienes cursos, intenta unirte a uno</div>';
 }
+
+    $sqlname = "SELECT nombre, apaterno, amaterno FROM usuario WHERE id=$alumno";
+    $resultao = $conn -> query($sqlname);
+    $arreglon = mysqli_fetch_array($resultao);
 
 ?>
