@@ -1,8 +1,7 @@
 const cursoscontenido = document.getElementById('cursos')
+const picale = document.getElementById('picale')
 const cardcursos = document.getElementById('cardcursos').content
 const fragment = document.createDocumentFragment()
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,15 +22,13 @@ const createCardcurso = (cursos) => {
 
 function inscribirse (comp){
     let id = comp;
-    console.log(id);
     $.ajax({
-        url: '../back/alumno/salcurso.php',
+        url: '../cursoinscrito.php',
         method: 'POST',
         data: { id: id },
         success: function(response) {
             console.log('Petición AJAX exitosa');
             console.log(response);
-            location.reload();
         },
         error: function(xhr, status, error) {
             console.log('Error en la petición AJAX');
@@ -41,6 +38,8 @@ function inscribirse (comp){
 }
 
 cursoscontenido.addEventListener('click', e => {
-    inscribirse(e.target.dataset.id)
+    if( e.target.className == 'btnmas btn btn-primary' ) {
+        inscribirse(e.target.dataset.id)
+    }
     e.preventDefault()
 })

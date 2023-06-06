@@ -1,6 +1,5 @@
 <?php
     session_start();
-    include '../conexion.php';
     $alumno = $_SESSION["id"];
 
     $sqlcursos = "SELECT c.id AS curso_id, c.horas ,c.nombre AS nombre_curso, m.id, m.nombre 

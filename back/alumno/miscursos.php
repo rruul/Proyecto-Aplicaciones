@@ -18,18 +18,21 @@
 
     $cursosno = array();
 
-// Verificar si se encontraron cursos inscritos
-if ($result->num_rows > 0) {
-    // Mostrar los cursos inscritos
-    while ($row = $result->fetch_assoc()) {
-        $cursosno[] = $row;
-    }
-    $cursosdisponibles = json_encode($cursosno);
-    echo "<script>";
-    echo "var cursosdisp = " . $cursosdisponibles . ";";
-    echo "</script>";
-} else {
-    echo '<div class="alert alert-danger text-center">Aun no tienes cursos, intenta unirte a uno</div>';
-}
+    // Verificar si se encontraron cursos inscritos
+    if ($result->num_rows > 0) {
+        // Mostrar los cursos inscritos
+        while ($row = $result->fetch_assoc()) {
+            $cursosno[] = $row;
+        }
+        $cursosdisponibles = json_encode($cursosno);
+        echo "<script>";
+        echo "var cursosdisp = " . $cursosdisponibles . ";";
+        echo "</script>";
+    } 
+
+    $sqlname = "SELECT nombre, apaterno, amaterno FROM usuario WHERE id=$alumno";
+    $resultao = $conn -> query($sqlname);
+    $arreglon = mysqli_fetch_array($resultao);
+
 
 ?>
