@@ -1,7 +1,7 @@
 const cursoscontenido = document.getElementById('cursos')
 const cardcursos = document.getElementById('cardcursos').content
 const fragment = document.createDocumentFragment()
-
+const impBuscar = document.getElementById('buscador')
 
 
 
@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const createCardcurso = (cursos) => {
+    cursoscontenido.innerHTML = ''
     cursos.forEach((curso) => { 
         cardcursos.querySelector('.titulo').innerHTML = curso.nombre_curso
         cardcursos.querySelector('.horas').innerHTML = 'Duración: ' + curso.horas + ' horas'
@@ -21,6 +22,12 @@ const createCardcurso = (cursos) => {
     })
     cursoscontenido.appendChild(fragment)
 } 
+
+impBuscar.addEventListener('keyup', () => {
+    let temp = []
+    temp = cursosdisp.filter((item) => item.nombre_curso.toLowerCase().includes(impBuscar.value.toLowerCase()))
+    createCardcurso(temp)
+})
 
 function inscribirse (comp){
     let id = comp;

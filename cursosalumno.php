@@ -32,7 +32,11 @@
 
     <main>
         <div class="contenedor">
-            <div class="container">
+            <div class="container mt-5">
+                <div class="buscador" id="divbuscador">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="buscador" class="imputbuscador" placeholder="Buscar curso">
+                </div>
                 <h2 class="mt-5 text-center">Cursos disponibles</h2>
                 <?php include './back/alumno/cursos.php'; ?>
                 <div class="cursos" id="cursos">

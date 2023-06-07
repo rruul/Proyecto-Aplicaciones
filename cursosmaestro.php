@@ -30,9 +30,13 @@
 <body>
     <?php include './header.php'?>
     <main>
-        <div class="contenedor">
+        <div class="contenedor mt-5">
             <div class="container">
-                <h2 class="mt-5 text-center">Cursos impartidos por otros maestros</h2>
+                <div class="buscador" id="divbuscador">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="buscador" class="imputbuscador" placeholder="Buscar curso">
+                </div>
+                <h2 class="text-center">Cursos impartidos por otros maestros</h2>
                 <?php include './back/maestro/cursos.php'; ?>
                 <div class="cursos" id="cursos">
                 

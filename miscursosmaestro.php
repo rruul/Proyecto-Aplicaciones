@@ -69,10 +69,8 @@
                 <div class="modal-body">
                     <label for="validationCustom01" class="form-label">Nombre del curso</label>
                     <input type="text" name="nombre" class="form-control" id="validationCustom01" require>
-                    <label for="validationCustom03" class="form-label mt-3">Acerca del curso</label>
+                    <label for="validationCustom03" class="form-label mt-3">Detalles del curso</label>
                     <textarea type="text" name="descripcion" class="form-control" id="validationCustom03" required></textarea>
-                    <label for="validationCustom04" class="form-label mt-3">Que se aprendera a lo largo de este curso?</label>
-                    <textarea type="text" name="aprende" class="form-control" id="validationCustom04" required></textarea>
                     <label for="validationCustom02" class="form-label mt-3">Duracion del curso en horas</label>
                     <input type="number" name="horas" step="0.01" class="form-control" id="validationCustom02" require>
                 </div>
