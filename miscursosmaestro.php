@@ -43,7 +43,7 @@
         <div class="contenedor">
             <div class="container">
                 <div class="cabeceratop" style="display: flex; ">
-                    <h2 class="mt-5">Tus cursos registrados</h2>
+                    <h2 class="mt-5">Tus cursos registrados </h2>
                     <?php include './back/maestro/miscursos.php'; ?>
                     <div class="nuevocurso">
                         <button type="button" class="btn btnregistrar" data-bs-toggle="modal" data-bs-target="#registrarcurso" style="margin-top: 50px!important; margin-left: 48vw; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
