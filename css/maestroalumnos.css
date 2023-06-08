@@ -1,0 +1,51 @@
+.stylecardcursos{
+    display: flex;
+    width: 40vh;
+    height: 30vh;
+    max-width: 85%;
+    text-decoration: none;
+    padding: 3vh;
+    color: black;
+    flex-direction: column;
+    margin-bottom: 4vh;
+    background-color: #AFD3E2;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 25px;
+    box-shadow: 5px 8px #19A7CE;
+    border-color: #19A7CE;
+}
+
+.cursos {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+}
+
+.btneliminar, .eliminarcurso {
+    transition-duration: 0.1s;
+}
+
+.btneliminar:hover, .eliminarcurso:hover {
+    color: white !important;
+    background-color: #27374D;
+    border-color: #27374D;
+}
+
+.btnregreso{
+    transition-duration: 0.1s;
+    background-color: #19A7CE!important;
+    border-color: #19A7CE!important;
+    color: white;
+}
+
+.btnregreso:hover{
+    background-color: #AFD3E2!important;
+    border-color: #AFD3E2!important;
+    color:black;
+}

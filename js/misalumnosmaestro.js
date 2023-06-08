@@ -16,7 +16,7 @@ const createCardalumno = (alumnos) => {
         htexto.innerHTML = 'No tienes alumnos registrados a este curso'
     }
     alumnos.forEach((alumno) => { 
-        cardalumno.querySelector('.nombre').innerHTML = alumno.nombre + alumno.apaterno + alumno.amaterno
+        cardalumno.querySelector('.nombre').innerHTML = alumno.nombre + ' ' + alumno.apaterno + ' '+ alumno.amaterno
         cardalumno.querySelector('.correo').innerHTML = alumno.correo
         cardalumno.querySelector('button').dataset.id = alumno.id
         const clone = cardalumno.cloneNode(true)

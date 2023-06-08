@@ -20,6 +20,10 @@
             body {
                 font-family: 'Red Hat Display', sans-serif;
             }
+            .cabeceratop{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
         </style>
         <!-- Required meta tags -->
         <meta charset="utf-8"/>
@@ -42,11 +46,11 @@
         <?php include './header.php'?>
         <div class="contenedor">
             <div class="container">
-                <div class="cabeceratop" style="display: flex; ">
+                <div class="cabeceratop">
                     <h2 class="mt-5">Tus cursos registrados </h2>
                     <?php include './back/maestro/miscursos.php'; ?>
                     <div class="nuevocurso">
-                        <button type="button" class="btn btnregistrar" data-bs-toggle="modal" data-bs-target="#registrarcurso" style="margin-top: 50px!important; margin-left: 48vw; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
+                        <button type="button" class="btn btnregistrar" data-bs-toggle="modal" data-bs-target="#registrarcurso" style="margin-top: 50px!important; margin-left: 28vw; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
                             <i class="bi bi-plus-circle-fill" style="margin-right: 5px;"></i>Registrar curso
                         </button>
                         <?php include './back/maestro/registrocurso.php'?>

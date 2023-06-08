@@ -21,6 +21,10 @@
             body {
                 font-family: 'Red Hat Display', sans-serif;
             }
+            .contbotones{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
         </style>
         <!-- Required meta tags -->
         <meta charset="utf-8"/>
@@ -34,6 +38,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link href="./css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/maestroalumnos.css">
         
         <link rel="icon" href="./img/open-book.png">
         <title>Cursos</title>
@@ -43,12 +48,12 @@
         <?php include './header.php'?>
         <div class="contenedor">
             <div class="container">
-                <div style="display: flex; align-items: center;; width: 100%">
+                <div style="width: 100%;" class="contbotones">
                     <h2 class="mt-5" id="htexto">Tus alumnos registrados a este curso</h2>
-                    <div class="container" id="btncontenedor" style="display: flex; flex-direction: row;">
+                    <div class="container" id="btncontenedor" style="display: flex; flex-direction: row; margin-top: 50px!important; margin-left: 15vw;">
                         <!-- Si se cambian estas clases de botones dentro de templates de debe cambiar el javascript o no jala-->
-                        <a class="btn btn-danger eliminarcurso"> Eliminar curso </a>
-                        <a href="./miscursosmaestro.php" class="btn btn-primary"> Regresar</a>
+                        <a class="btn btn-danger eliminarcurso" style="height: 5vh;"> Eliminar curso </a>
+                        <a href="./miscursosmaestro.php" class="btn btn-primary btnregreso" style="margin-left: 10px; height: 5vh;"> Regresar</a>
                     </div>
                 </div>
                 <div class="cursos mt-5" id="alumnos">
@@ -60,11 +65,17 @@
         <?php include './footer.html'?>
         <template id="cardalumno">
             <div class="stylecardcursos">
-                <div class="nombre"></div>
-                <div class="correo" id="correo"> </div>
+                <div class="textos">
+                    <i class="bi bi-person-circle" style="font-size: 4em; margin: 0;"></i>
+                    <div class="mastextos" style="margin: 0;">
+                        <div class="nombre" style="font-size: 18px;"></div>
+                        <div class="correo" id="correo"> </div> 
+                    </div>
+                </div>
                 <!-- Si se cambian estas clases de botones dentro de templates de debe cambiar el javascript o no jala-->
-                <button class="btn btn-danger btneliminar">Eliminar</button>
+                <button class="btn btn-danger btneliminar" style=" height: 5vh; width: 15vw;">Eliminar</button>
             </div>
+            <br>
         </template>
 
     </main>
