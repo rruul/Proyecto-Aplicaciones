@@ -42,7 +42,20 @@
                         <img class="carousel-image d-block w-100" src="./img/1.jpg">
                         <span class="carousel-caption">
                             <?php if(!empty($_SESSION["id"])):?>
-                               <?php echo ' <h5> Bienvenido(a) '. '<span class="text-info">' . $_SESSION["tipo"] . '</span></h5>'?>
+                                <?php 
+                                    $idusu = $_SESSION["id"];
+                                    $usutipo = $_SESSION["tipo"];
+                                    if ($usutipo == "alumno"){
+                                        $sql = "SELECT * FROM usuario WHERE id='$idusu'";
+                                        $res = mysqli_query($conn, $sql);
+                                        $datusu = mysqli_fetch_array($res);
+                                    } else {
+                                        $sql = "SELECT * FROM maestro WHERE id='$idusu'";
+                                        $res = mysqli_query($conn, $sql);
+                                        $datusu = mysqli_fetch_array($res);
+                                    }
+                                    echo ' <h5> Bienvenido(a) '. '<span class="text-info">' . $usutipo . '(a) '. $datusu['nombre'] .' '. $datusu['apaterno'] .' '. $datusu['amaterno'].'</span></h5>';
+                                ?>
                                 <p>
                                     Continua con los cursos en los que ya llevas progreso!
                                 </p>
@@ -63,7 +76,20 @@
                         <img class="carousel-image d-block w-100" src="./img/2.jpg">
                         <span class="carousel-caption">
                             <?php if(!empty($_SESSION["id"])):?>
-                               <?php echo ' <h5> Bienvenido(a) '. '<span class="text-info">' . $_SESSION["tipo"] . '</span></h5>'?>
+                                <?php 
+                                    $idusu = $_SESSION["id"];
+                                    $usutipo = $_SESSION["tipo"];
+                                    if ($usutipo == "alumno"){
+                                        $sql = "SELECT * FROM usuario WHERE id='$idusu'";
+                                        $res = mysqli_query($conn, $sql);
+                                        $datusu = mysqli_fetch_array($res);
+                                    } else {
+                                        $sql = "SELECT * FROM maestro WHERE id='$idusu'";
+                                        $res = mysqli_query($conn, $sql);
+                                        $datusu = mysqli_fetch_array($res);
+                                    }
+                                    echo ' <h5> Bienvenido(a) '. '<span class="text-info">' . $usutipo . '(a) '. $datusu['nombre'] .' '. $datusu['apaterno'] .' '. $datusu['amaterno'].'</span></h5>';
+                                ?>
                                 <p>
                                     Busca cursos nuevos para comenzar!
                                 </p>
@@ -84,7 +110,20 @@
                         <img class="carousel-image d-block w-100" src="./img/3.jpg">
                         <span class="carousel-caption">
                             <?php if(!empty($_SESSION["id"])):?>
-                               <?php echo ' <h5> Bienvenido(a) '. '<span class="text-info">' . $_SESSION["tipo"] . '</span></h5>'?>
+                                <?php 
+                                    $idusu = $_SESSION["id"];
+                                    $usutipo = $_SESSION["tipo"];
+                                    if ($usutipo == "alumno"){
+                                        $sql = "SELECT * FROM usuario WHERE id='$idusu'";
+                                        $res = mysqli_query($conn, $sql);
+                                        $datusu = mysqli_fetch_array($res);
+                                    } else {
+                                        $sql = "SELECT * FROM maestro WHERE id='$idusu'";
+                                        $res = mysqli_query($conn, $sql);
+                                        $datusu = mysqli_fetch_array($res);
+                                    }
+                                    echo ' <h5> Bienvenido(a) '. '<span class="text-info">' . $usutipo . '(a) '. $datusu['nombre'] .' '. $datusu['apaterno'] .' '. $datusu['amaterno'].'</span></h5>';
+                                ?>
                                 <p>
                                     Imparte un nuevo curso!
                                 </p>
