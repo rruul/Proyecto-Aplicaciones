@@ -28,8 +28,9 @@ if ($result->num_rows > 0) {
     echo "<script>";
     echo "var cursosdisp = " . $cursosdisponibles . ";";
     echo "</script>";
-} else {
-    echo '<div class="alert alert-danger text-center">Aun no tienes cursos, intenta unirte a uno</div>';
-}
+} 
+    $sqlname = "SELECT nombre, apaterno, amaterno FROM usuario WHERE id=$alumno";
+    $resultao = $conn -> query($sqlname);
+    $arreglon = mysqli_fetch_array($resultao);
 
 ?>
