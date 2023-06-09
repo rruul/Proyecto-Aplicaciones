@@ -1,6 +1,7 @@
 <?php
     session_start();
     include './back/conexion.php';
+    include './back/alumno/info.php';
     if(empty($_SESSION["id"])){
         header('location: ./index.php');
     }
@@ -12,6 +13,15 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <style>
+            .btnregistrar:hover {
+                color: black!important;
+                background-color: #AFD3E2!important;
+            }
+            body {
+                font-family: 'Red Hat Display', sans-serif;
+            }
+        </style>
         <!-- Required meta tags -->
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,47 +33,46 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        <link href="/css/style.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="./css/mcursosmaestro.css">
-        <title>Cursos</title>
+        <link href="./css/style.css" rel="stylesheet">
+        
+        <link rel="icon" href="./img/open-book.png">
+        <title>Curso</title>
     </head>
 <body>
-    <?php include './header.php'?>
-
-    <main>
+    <main style="background-color:black;">
+        <?php include './header.php'?>
         <div class="contenedor">
-            <div class="container mt-3">
-            <?php include './back/alumno/miscursos.php'; ?>
-            <p>Bienvenido</p>
-                <h3 class="text-uppercase"> <?php echo $arreglon['nombre']. ' '. $arreglon['apaterno']. ' '. $arreglon['amaterno']?></h3>
-                <h2 class="text-center">Tus cursos</h2>
+            <div class="container text-light" style="background-color:#2B5966;">
+                <h2 class=" text-center pt-3" id="htexto"><?php echo $cos['nombre'] ?></h2>
+                
+                <p> Creado por: <?php echo $maes['nombre'].' '. $maes['apaterno']. ' '. $maes['amaterno']?></p>
+                <div class="container">
+                    <p><i class="bi bi-globe"></i> Español</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="alert alert-success text-center" style="display:none;">Muy bien ya estas tomando el curso, date una vuelta por tus cursos</div>
+            </div>
+            <div class="container">
+                <div class="contenido" id="contenido">
+                <p class="mt-3" > <?php echo $cos['descripcion']?></p>
+                </div>
 
-                
-                <div class="cursos" id="cursos">
-                
+            </div>
+            <div class="container">
+                <div class="suscribete">
+                    <button type="button" class="btn btn-outline-dark" id="btninsc">Tomar curso</button>
+                    <a href="./cursosalumno.php" class="btn btn-danger">Regresar</a>
                 </div>
             </div>
         </div>
 
         <?php include './footer.html'?>
-
-
-
-        <template id="cardcursos">
-            <div class="stylecardcursos">
-                <div class="titulo"></div>
-                <img src="./img/imgcurso.png" class="imgcardcursos">
-                <div class="horas" id="horas"> </div>
-                <form action="./cursoinfoal.php" method="post">
-                    <input type="number" name="id" id="id" class="d-none">
-                    <input type="submit" value="Ver curso" class="btninfo btn btn-primary" id="btninfo">
-                </form>
-            </div>
-        </template>
     </main>
     
-    <script src="./js/miscursosalumno.js"></script>
+    <script src="/js/infocursos.js"></script>
     <script src="/js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
