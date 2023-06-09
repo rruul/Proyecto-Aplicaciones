@@ -20,15 +20,21 @@
                     $_SESSION["tipo"] = "alumno";
                     header("location: ./index.php");
                 } 
+                else {
+                    echo '<div class="alert alert-danger">ACCESO DENEGADO</div>';
+                }
             } elseif (mysqli_num_rows($resultado1) > 0) {
                 $mae=mysqli_fetch_array($resultado1);
                 if($mae['correo']==$usuario and (password_verify($contrasena, $mae['contrasena']))) {
                     $_SESSION["id"] = $mae['id'];
                     $_SESSION["tipo"] = "maestro";
                     header("location: ./index.php");
-                } 
+                }
+                else {
+                    echo '<div class="alert alert-danger">ACCESO DENEGADO</div>';
+                }
             } else {
-                echo '<div class="alert alert-danger">ACCESO DENEGADO</div>';
+                echo '<div class="alert alert-danger">USUARIO NO ENCONTRADO</div>';
             }
         } 
         else {
