@@ -41,7 +41,12 @@
                         VALUES('$nombre', '$apaterno', '$amaterno', '$correo', '$contrasena_encriptada', '$numero', '')";
                         $resultado = mysqli_query($conn, $query);
                         if($resultado) {
-                            echo '<div class="alert alert-success">REGISTRO EXITOSO</div>';
+                            $logi = "SELECT * FROM usuario WHERE correo='$correo'";
+                            $logire = mysqli_query($conn, $logi);
+                            $chupa = mysqli_fetch_array($logire);
+                            $_SESSION["id"] = $chupa['id'];
+                            $_SESSION["tipo"] = "alumno";
+                            header("location: ./index.php");
                         } else {
                             echo '<div class="alert alert-danger">ERROR INESPERADO, INTENTE MAS TARDE</div>';
                         } 
@@ -69,7 +74,12 @@
                         VALUES('$nombre', '$apaterno', '$amaterno', '$correo', '$contrasena_encriptada', '$numero', '')";
                         $resultado = mysqli_query($conn, $query);
                         if($resultado) {
-                            echo '<div class="alert alert-success">REGISTRO EXITOSO</div>';
+                            $logins = "SELECT * FROM maestro WHERE correo='$correo'";
+                            $loextraterretre = mysqli_query($conn, $logins);
+                            $chupapi = mysqli_fetch_array($loextraterretre);
+                            $_SESSION["id"] = $chupapi['id'];
+                            $_SESSION["tipo"] = "maestro";
+                            header("location: ./index.php");
                         } else {
                             echo '<div class="alert alert-danger">ERROR INESPERADO, INTENTE MAS TARDE</div>';
                         } 
