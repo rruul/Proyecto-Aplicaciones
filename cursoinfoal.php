@@ -21,6 +21,17 @@
             body {
                 font-family: 'Red Hat Display', sans-serif;
             }
+            .texto {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .suscribete{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
         </style>
         <!-- Required meta tags -->
         <meta charset="utf-8"/>
@@ -42,12 +53,12 @@
     <main style="background-color:black;">
         <?php include './header.php'?>
         <div class="contenedor">
-            <div class="container text-light" style="background-color:#2B5966;">
+            <div class="container text-light" style="background-color:#27374D;">
                 <h2 class=" text-center pt-3" id="htexto"><?php echo $cos['nombre'] ?></h2>
                 
-                <p> Creado por: <?php echo $maes['nombre'].' '. $maes['apaterno']. ' '. $maes['amaterno']?></p>
-                <div class="container">
-                    <p><i class="bi bi-globe"></i> Español</p>
+                <div class="texto">
+                    <p> <b>Creado por:</b> <?php echo $maes['nombre'].' '. $maes['apaterno']. ' '. $maes['amaterno']?></p>
+                    <p style="margin-left: 3vw;"><i class="bi bi-globe"></i> Español</p>
                 </div>
             </div>
             <div class="container">
@@ -62,7 +73,7 @@
             <div class="container">
                 <div class="suscribete">
                     <button type="button" class="btn btn-outline-dark" id="btnsal">Salir del curso</button>
-                    <a href="./miscursosalumno.php" class="btn btn-danger">Regresar</a>
+                    <a href="./miscursosalumno.php" class="btn btn-outline-danger" style ="margin-left: 10px;">Regresar</a>
                 </div>
             </div>
         </div>
