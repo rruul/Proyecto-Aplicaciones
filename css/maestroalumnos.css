@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid;
-    border-radius: 25px;
+    border-radius: 8px;
     box-shadow: 5px 8px #19A7CE;
     border-color: #19A7CE;
 }
@@ -48,4 +48,10 @@
     background-color: #AFD3E2!important;
     border-color: #AFD3E2!important;
     color:black;
+}
+
+.textos{
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
