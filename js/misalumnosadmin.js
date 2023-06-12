@@ -4,7 +4,10 @@ const htexto = document.getElementById('htexto')
 const cardalumno = document.getElementById('cardalumno').content
 const fragment = document.createDocumentFragment()
 
+const iddelcurso = document.getElementById('iddelcurso')
+
 document.addEventListener('DOMContentLoaded', () => {
+    iddelcurso.value = id_curso
     console.log(alumnos)
     createCardalumno(alumnos)
 })

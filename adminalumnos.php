@@ -8,6 +8,8 @@
     if($_SESSION["tipo"] != "admin"){
         header('location: ./index.php');
     }
+    $sqlalum = "SELECT * FROM usuario";
+    $resalum = $conn->query($sqlalum);
 ?>
 
 <!DOCTYPE html>
@@ -50,10 +52,15 @@
             <div class="container">
                 <div style="width: 100%;" class="contbotones">
                     <h2 class="mt-5" id="htexto">Alumnos registrados a este curso</h2>
+                    
                     <div class="container" id="btncontenedor" style="display: flex; flex-direction: row; margin-top: 50px!important; margin-left: 15vw;">
                         <!-- Si se cambian estas clases de botones dentro de templates de debe cambiar el javascript o no jala-->
+                        
                         <a class="btn btn-danger eliminarcurso" style="height: 5vh;"> Eliminar curso </a>
                         <a href="./miscursosadmin.php" class="btn btn-primary btnregreso" style="margin-left: 10px; height: 5vh;"> Regresar</a>
+                        <button type="button" class="btn btnregistrar" data-bs-toggle="modal" data-bs-target="#registraralumno" style="margin-top: 50px!important; margin-left: 28vw; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
+                            <i class="bi bi-plus-circle-fill" style="margin-right: 5px;"></i>Registrar Alumno
+                        </button>
                     </div>
                 </div>
                 <div class="cursos mt-5" id="alumnos">
@@ -77,6 +84,34 @@
             </div>
             <br>
         </template>
+
+
+        <div class="modal fade" id="registraralumno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <form action="" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar un curso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="idcurso" id="iddelcurso" class="form-control" value="">
+                    <label class="form-label" for="maestros">Elige un alumno para añadir</label>
+                    <select id="cars" name="alumnos" class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <?php while($alum=mysqli_fetch_array($resalum)){ ?>
+                            <option value="<?php echo $alum['id']?>"><?php echo $alum['nombre'].' '.$alum['apaterno'].' '.$alum['amaterno']?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" name="btnregcurso" value="Aceptar" id="btnregcurso">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </form>
+                </div>
+            </div>
+        </div>
+
 
     </main>
     
