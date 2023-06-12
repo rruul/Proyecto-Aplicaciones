@@ -1,6 +1,7 @@
 const cursoscontenido = document.getElementById('cursos')
 const cardcursos = document.getElementById('cardcursos').content
 const fragment = document.createDocumentFragment()
+const impBuscar = document.getElementById('buscador')
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log(resultados)
@@ -19,3 +20,8 @@ const createCardcurso = (cursos) => {
     cursoscontenido.appendChild(fragment)
 } 
 
+impBuscar.addEventListener('keyup', () => {
+    let temp = []
+    temp = resultados.filter((item) => item.nombre_curso.toLowerCase().includes(impBuscar.value.toLowerCase()))
+    createCardcurso(temp)
+})

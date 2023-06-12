@@ -57,6 +57,10 @@
         <?php include './header.php'?>
         <div class="contenedor">
             <div class="container">
+                <div class="buscador" id="divbuscador">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="buscador" class="imputbuscador" placeholder="Buscar curso">
+                </div>
                 <div style="width: 100%;" class="contbotones">
                     <h2 class="mt-5" id="htexto">Alumnos registrados a este curso</h2>
                     

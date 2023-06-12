@@ -48,7 +48,12 @@
         <?php include './header.php'?>
         <div class="contenedor">
             <div class="container">
+            <div class="buscador mt-3" id="divbuscador">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="buscador" class="imputbuscador" placeholder="Buscar curso">
+                </div>
                 <div class="cabeceratop">
+                    
                     <h2 class="mt-5">Cursos registrados </h2>
                     <?php include './back/admin/cursos.php'; ?>
                     <div class="nuevocurso">
