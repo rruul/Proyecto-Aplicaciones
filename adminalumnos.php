@@ -8,7 +8,13 @@
     if($_SESSION["tipo"] != "admin"){
         header('location: ./index.php');
     }
-    $sqlalum = "SELECT * FROM usuario";
+    $sqlalum = "SELECT id, nombre, apaterno, amaterno
+    FROM usuario
+    WHERE id NOT IN (
+      SELECT id_alumno
+      FROM inscripcion
+      WHERE id_curso = 7
+    )";
     $resalum = $conn->query($sqlalum);
 ?>
 
@@ -95,7 +101,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <input type="text" name="idcurso" id="iddelcurso" class="form-control" value="">
+                    <input type="text" name="idcurso" id="iddelcurso" class="form-control d-none" value="">
                     <label class="form-label" for="maestros">Elige un alumno para añadir</label>
                     <select id="cars" name="alumnos" class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                         <?php while($alum=mysqli_fetch_array($resalum)){ ?>
