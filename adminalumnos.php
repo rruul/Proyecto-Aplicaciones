@@ -15,7 +15,7 @@
       FROM inscripcion
       WHERE id_curso = 7
     )";
-    
+
     $resalum = $conn->query($sqlalum);
 ?>
 
@@ -60,15 +60,17 @@
                 <div style="width: 100%;" class="contbotones">
                     <h2 class="mt-5" id="htexto">Alumnos registrados a este curso</h2>
                     
-                    <div class="container" id="btncontenedor" style="display: flex; flex-direction: row; margin-top: 50px!important; margin-left: 15vw;">
+                    <div class="container contbotones" id="btncontenedor" style="display: flex; flex-direction: row; margin-top: 50px!important; margin-left: 10vw;">
                         <!-- Si se cambian estas clases de botones dentro de templates de debe cambiar el javascript o no jala-->
                         
                         <a class="btn btn-danger eliminarcurso" style="height: 5vh;"> Eliminar curso </a>
                         <a href="./miscursosadmin.php" class="btn btn-primary btnregreso" style="margin-left: 10px; height: 5vh;"> Regresar</a>
-                        <button type="button" class="btn btnregistrar" data-bs-toggle="modal" data-bs-target="#registraralumno" style="margin-top: 50px!important; margin-left: 28vw; background-color: #19A7CE; color: white; transition-duration: 0.1s!important;">
+                        <button type="button" class="btn btnregistrar" data-bs-toggle="modal" data-bs-target="#registraralumno" style="margin-left: 10px; height: 5vh; background-color: #125669; color: white; transition-duration: 0.1s!important;">
                             <i class="bi bi-plus-circle-fill" style="margin-right: 5px;"></i>Registrar Alumno
                         </button>
                     </div>
+
+
                 </div>
                 <div class="cursos mt-5" id="alumnos">
                 
