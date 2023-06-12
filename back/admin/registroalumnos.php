@@ -1,4 +1,5 @@
 <?php
+
     include '../conexion.php';
     $alumno = $_POST['alumnos'];
     $idcurso = $_POST['idcurso'];
@@ -13,6 +14,6 @@
     $resultado1 = mysqli_query($conn, $sql);
     if($resultado1){
         echo 'todo joya';
-        header('/');
+        header('location: ../../miscursosadmin.php');
     }
 ?>
