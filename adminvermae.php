@@ -26,9 +26,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        <link href="./css/style.css" rel="stylesheet"/>
-        <link href="./css/login.css" rel="stylesheet"/>
-        <link rel="icon" href="./img/open-book.png">
+        <link href="./css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/maestroalumnos.css">
         <title>Maestros en plat</title>
 </head>
 <body>
@@ -41,34 +40,26 @@
         </div>
       </div>
       <div class="row">
-        <div class="col contenido" id="profes">
+        <div class="col contenido" id="alumnos">
           <!-- Contenido del segundo contenedor -->
         </div>
       </div>
     </div>
 
-    <template id="cardprofes">
-      <div class="cardstyle">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-8">
-            
-              <div class="card-body">
-                <h5 class="card-title nombre"></h5>
-                <div class="divmail">
-                  <p class="card-text correo"></p>
-                  <a href="" class="mailto"><i class="fa-solid fa-envelope"></i></a>
+    <template id="cardalumno">
+            <div class="stylecardcursos">
+                <div class="textos">
+                    <i class="bi bi-person-circle" style="font-size: 4em; margin: 0;"></i>
+                    <div class="mastextos" style="margin: 0;">
+                        <div class="nombre" style="font-size: 18px;"></div>
+                        <div class="correo" id="correo"> </div> 
+                    </div>
                 </div>
-                <p class="card-text conmutador"></p>
-                <p class="card-text extension"></p>
+                <!-- Si se cambian estas clases de botones dentro de templates de debe cambiar el javascript o no jala-->
                 <button class="btn btn-danger calif" style=" height: 5vh; width: 15vw;">Eliminar</button>
-              </div>
-              <div class="card-footer text-muted cargo"></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </template>
+            <br>
+      </template>
 
   </main>
     <script src="./js/adminmae.js"></script>
