@@ -32,6 +32,7 @@
                         </div>
                     </div>
                 <?php endif; ?>
+                    
                     <a id="home" href="/" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;" aria-current="true">
                         <i class="bi bi-house"></i><span style="margin-left: 5px;"> Pagina principal</span>
                     </a>
