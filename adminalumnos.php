@@ -15,6 +15,7 @@
       FROM inscripcion
       WHERE id_curso = 7
     )";
+    
     $resalum = $conn->query($sqlalum);
 ?>
 
