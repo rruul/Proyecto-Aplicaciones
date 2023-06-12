@@ -51,9 +51,16 @@
                         <a href="./registro.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
                             <i class="bi bi-person-circle"></i><span style="margin-left: 5px;"> Registrar usuarios</span>
                         </a>
+                        <a href="./adminveral.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
+                            <i class="bi bi-people"></i><span style="margin-left: 5px;">Alumnos en plataforma</span>
+                        </a>
+                        <a href="./adminvermae.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #19A7CE; border-radius: 5px;">
+                            <i class="bi bi-people"></i><span style="margin-left: 5px;">Maestros en plataforma</span>
+                        </a>
                         <a href="./back/login/control_logout.php" class="btnopc list-group-item list-group-item-action py-2 ripple text-light p-2" style="background-color: #27374D; border-radius: 5px;">
                             <i class="bi bi-people"></i><span style="margin-left: 5px;"> Salir</span>
                         </a>
+                        
                         
                     <?php endif; ?>
                     
