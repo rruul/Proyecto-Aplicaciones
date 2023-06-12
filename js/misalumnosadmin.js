@@ -47,7 +47,7 @@ function eliminarcurso (){
         success: function(response) {
             console.log('Petición AJAX exitosa');
             console.log(response);
-            location.replace('../miscursosmaestro.php');
+            location.replace('../miscursosadmin.php');
         },
         error: function(xhr, status, error) {
             console.log('Error en la petición AJAX');

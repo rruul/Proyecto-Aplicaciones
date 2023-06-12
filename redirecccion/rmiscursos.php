@@ -4,7 +4,9 @@
         header("location: ../miscursosalumno.php");
     } elseif($_SESSION["tipo"] == "maestro") {
         header("location: ../miscursosmaestro.php");
-    } else {
+    } elseif($_SESSION["tipo"] == "admin") {
+        header("location: ../miscursosadmin.php");
+    }  else {
         header("location: ../regorlog.php");
     } 
 ?>

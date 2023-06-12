@@ -55,7 +55,10 @@
                 <img src="./img/imgcurso.png" class="imgcardcursos">
                 <div class="horas" id="horas"> </div>
                 <div class="maestro" id="maestro"></div>
-                <a type="button" href="/" class="btnmas btn btn-primary">Inscribirse</a>
+                <form  action="./cursoinfo.php" method="post" >
+                    <input type="number" name="id" id="id" class="id d-none" value="">
+                    <input type="submit" value="Informacion" class="btninfo btn btn-primary" id="btninfo">
+                </form>
                 
             </div>
         </template>

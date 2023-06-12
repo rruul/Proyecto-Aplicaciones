@@ -69,9 +69,9 @@
                         </div>
                         
                         <div class="col-12 text-center text-light">
-                            <label class="form-label" for="tipousuario">¿Que funcion cumples?</label>
+                            <label class="form-label" for="tipousuario">¿Que funcion cumple?</label>
                             <select id="cars" name="tipousuario" class="form-control">
-                                <option value="none">Elige tu funcion</option>
+                                <option value="none">Elige la funcion</option>
                                 <option value="maestro">Maestro</option>
                                 <option value="alumno">Alumno</option>
                               </select>
